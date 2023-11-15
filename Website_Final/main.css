@@ -1,0 +1,330 @@
+body {
+    font-family: Numans, Comic Sans, sans-serif;
+    color: whitesmoke;
+    margin:0;
+    background-color: purple;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    background-image: url("images/Background 3.jpg");
+    height: 100vh;
+    background-size: 100% 100%;
+}
+#WELCOME {
+    padding: 5px;
+}
+#SKILLS {
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+#PORTFOLIO {
+    padding-top: 5px;
+}
+section {
+    background-color: blueviolet;
+    background-position: center;
+    border-radius: 1rem;
+
+}
+
+section:nth-child(2n) {
+    background-color: darkmagenta;
+    border-radius: 1rem;
+}
+
+footer{
+    background-color: purple;
+    color: white;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .container
+}
+
+@media screen and (max-width: 800px) {
+    .Contactform {
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.grid {
+
+    --gap: 2rem;
+    --line-offset: calc(var(--gap) / 2);
+    --line-thickness: 10px;
+    --line-color: blueviolet;
+
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    overflow: hidden;
+    gap: var(--gap);
+    background-color: darkorchid;
+    border-style: solid;
+    border-color: purple;
+    border-width: 10px;
+}
+
+.grid__item {
+    position: relative;
+}
+
+.grid__item::before,
+.grid__item::after {
+    content: '';
+    position: absolute;
+    background-color: var(--line-color);
+    z-index: 1;
+}
+
+.grid__item::after {
+    inline-size: 100vw;
+    block-size: var(--line-thickness);
+    inset-inline-start: 0;
+    inset-block-start: calc(var(--line-offset) * -1);
+}
+
+.grid__item::before {
+    inline-size: var(--line-thickness);
+    block-size: 100vh;
+    inset-inline-start: calc(var(--line-offset) * -1);
+}
+
+.background-box {
+    background-color: rebeccapurple;
+}
+
+.title {
+    font-family: Nunito, sans-serif;
+    color: darkorchid;
+    text-decoration-thickness: 5px;
+    margin-top: 2rem;
+}
+.rotate {
+    transform: rotate(-12deg);
+}
+h1 {
+    font-family: Corbel, Arial, sans-serif;
+    text-align: center;
+    color: darkorchid;
+    text-shadow: 2px 2px 2px rebeccapurple;
+    font-size: 60px;
+}
+.TopBar {
+    display: flex;
+    background-color: darkorchid;
+    width: 850px;
+    height: 100px;
+    border-style: solid;
+    border-color: purple;
+    border-width: 8px;
+}
+.footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.image-container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+}
+
+.image1 {
+    margin-top: 5rem;
+}
+
+.image3 {
+    padding-top: 40px;
+    margin-bottom: 8rem;
+}
+
+.image4 {
+    padding-top: 40px;
+}
+
+.FirstBorder {
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rebeccapurple;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: lightpink;
+}
+.contact {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+.ImageContainerPortfolio {
+    padding-top: 90px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+    justify-content: center;
+}
+
+.lines {
+
+}
+h3 {
+    text-align: center;
+    font-size: 50px;
+}
+h3 span {
+    background-color: darkorchid;
+    border-style: solid;
+    border-color: purple;
+    border-width: 7px;
+}
+.Contactform {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Input {
+    width: 100%;
+}
+.Input-field {
+    width: 100%;
+}
+.input-label {
+    width: 100%;
+}
+
+.Content {
+    width: 100%;
+}
+
+.Gridcontainer {
+    max-width: 73rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 10fr);
+    grid-column-gap: 2rem;
+}
+
+.Gridcontainer-contact {
+    padding: 4rem 0;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    ". content content content content ."
+    ". contactform contactform contactform contactform .";
+}
+
+.Content {
+    grid-area: content;
+}
+
+.Contactform {
+    grid-area: contactform;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    "firstname lastname"
+    "email website"
+    "subject subject"
+    "message message"
+    "send reset";
+    grid-gap: 2rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+.Input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.Input-label {
+    color: white;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.label {
+    cursor: default;
+    color: white;
+}
+.Input-field {
+    font-size: 1rem;
+    font-family: inherit;
+    border: none;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    background-color: white;
+}
+
+.ContactButton {
+    width: 80px;
+    font-family: inherit;
+    font-size: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: #8a63ff;
+    color: #fff;
+    justify-content: center;
+}
+.PortfolioImageOne {
+    background-color: darkorchid;
+    border-style: solid;
+    border-color: purple;
+    border-width: 10px;
+}
+.PortfolioImageTwo {
+    background-color: darkorchid;
+    border-style: solid;
+    border-color: purple;
+    border-width: 10px;
+}
