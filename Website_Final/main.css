@@ -41,10 +41,6 @@ footer{
     border-radius: 1rem;
 }
 
-@media screen and (max-width: 1200px) {
-    .container
-}
-
 @media screen and (max-width: 800px) {
     .Contactform {
         grid-template-rows: repeat(1, 1fr);
