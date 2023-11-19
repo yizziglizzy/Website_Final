@@ -1,5 +1,5 @@
 body {
-    font-family: Numans, Comic Sans, sans-serif;
+    font-family: Numans, "Comic Sans", sans-serif;
     color: whitesmoke;
     margin:0;
     background-color: purple;
@@ -112,10 +112,10 @@ footer{
     font-family: Nunito, sans-serif;
     color: darkorchid;
     text-decoration-thickness: 5px;
-    margin-top: 2rem;
 }
 .rotate {
     transform: rotate(-12deg);
+    margin-top: 9rem;
 }
 h1 {
     font-family: Corbel, Arial, sans-serif;
@@ -157,6 +157,7 @@ h1 {
 
 .image4 {
     padding-top: 40px;
+    margin-top: 1rem;
 }
 
 .FirstBorder {
@@ -323,4 +324,11 @@ h3 span {
     border-style: solid;
     border-color: purple;
     border-width: 10px;
+}
+.Arrow {
+    text-align: center;
+    margin-right: 5rem;
+}
+.Arrow2 {
+    text-align: center;
 }
